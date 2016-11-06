@@ -1,0 +1,191 @@
+body {
+	font-family: "RobotoRegular", sans-serif;
+	font-size: 16px;
+	background-color: #dee1eb;
+}
+a, a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+/*HEADER*/
+
+
+.header {
+	position: relative;
+	margin: 15px 0;
+	height: 70px;
+	border: 1px solid #b9bfd2;
+	border-radius: 10px;
+	box-shadow: 0 3px 7px #7d808a;
+}
+.logo {
+	line-height: 65px;
+	font-size: 2.7em;
+	font-family: "RobotoBlack", sans-serif;
+	margin-left: 20px;
+}
+.logo-href {
+	cursor: pointer;
+}
+.logo-href:hover, .logo-href:active, .logo-href:focus, .logo-href:visited  {
+	text-decoration: none;
+	color: inherit;
+}
+.logo:first-letter {
+	color: #286090;
+	font-size: 1.4em;
+}
+.logging {
+	position: absolute;
+	top: 18px;
+	right: 50px;
+}
+.sign-in {
+	display: inline-block;
+}
+.sign-up {
+	position: absolute;
+	top: 40px;
+	right: 10px;
+	z-index: 10;
+	background-color: #edeff6;
+	padding: 10px 10px 0;
+	border-radius: 10px;
+	width: 450px;
+}
+.btn-sign-up {
+	margin-left: 30px;
+}
+.sing-in-massage {
+	position: absolute;
+	top: 31px;
+	left: 10px;
+	font-size: 0.9em;
+	color: #b61619;
+}
+.sign-up-message {
+	margin-left: 25px;
+	color: #b61619;
+}
+.check {
+	color: #1cc728;
+}
+
+
+
+/*PRODUCTS*/
+
+
+.main {
+	background-color: white;
+	box-shadow: 0 0 3px #7d808a;
+	border-radius: 3px;
+	padding: 10px 10px;
+	display: inline-block;
+	width: 100%;
+	min-height: 500px;
+}
+.product {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 200px;
+	height: 200px;
+	border: 1px solid;
+	margin: 10px;
+	padding: 15px;
+	border-radius: 5px;
+	background-color: #ebebf2;
+}
+.product-href {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+.product:hover {
+	background-color: #dedee7;
+}
+.product-img {
+	width: 140px;
+	height: 140px;
+	margin: 0 15px 10px;
+}
+.product-text {
+	text-align: center;
+}
+
+
+/*PRODUCT reviews*/
+
+
+.product-wrapper, .review-wrapper {
+	position: relative;
+	padding: 5px;
+	border: 1px solid #dedee7;
+	border-radius: 3px;
+	background-color: #ebebf2;
+	box-shadow: 0 1px 3px #7d808a;
+}
+.product-title, .description {
+	font-family: "RobotoMedium", sans-serif;
+	margin: 0 15px 10px;
+}
+.img {
+	width: 200px;
+	height: 200px;
+	margin: 0 15px 20px;
+	background-color: #ddd;
+}
+.product-description {
+	margin: 0 15px;
+}
+.comment {
+	resize: none;
+	margin-bottom: 10px
+}
+.review-wrapper {
+	margin: 10px 0;
+}
+.review-wrapper:first-child {
+	margin-top: 10px;
+}
+.review-rate, .rate {
+	line-height: 30px;
+	padding-left: 10px;
+	font-size: 1.7em;
+	padding: 0;
+	color: #7d808a;
+}
+.review-rate:hover {
+	color: #286090;
+}
+.rated {
+	color: #EE9A00;
+}
+.right {
+	position: absolute;
+	right: 20px;
+}
+.rate {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+.rate>li {
+	padding: 0;
+}
+.revMes {
+	position: absolute;
+	right: 150px;
+	top: 86px;
+	line-height: 20px;
+	padding: 5px;
+	color: #b61619;
+}
+.none {
+	display: none;
+}

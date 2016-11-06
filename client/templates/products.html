@@ -1,0 +1,10 @@
+
+<article class="main">
+  <section class="product" ng-repeat="product in $ctrl.AllProducts">
+    <img  ng-src="http://smktesting.herokuapp.com/static/{{product.img}}" alt="image" class="product-img"/>
+    <p class="product-text">
+      {{product.title}}
+    </p>
+    <a ng-href="review/{{product.id}}" class="product-href"></a>
+  </section>
+</article>

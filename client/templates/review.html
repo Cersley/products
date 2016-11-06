@@ -1,0 +1,35 @@
+<article class="main">
+  <div class="col-sm-5">
+    <section class="product-wrapper">
+      <h2 class="product-title">{{$ctrl.product.title}}</h2>
+      <img ng-src="http://smktesting.herokuapp.com/static/{{$ctrl.product.img}}" alt="product" class="img">
+      <h4 class="description">Description:</h4>
+      <p class="product-description">{{$ctrl.product.text}}</p>
+    </section>
+  </div>
+  <div class="col-sm-7">
+    <section>
+      <form ng-submit="$ctrl.addReview(ctrl.rating, $ctrl.review)">
+        <textarea class="form-control comment" rows="3"
+                  placeholder="Type your review..."
+                  ng-model="$ctrl.review" required></textarea>
+        <jk-rating-stars max-rating="5"
+                         rating="$ctrl.rating"
+                         read-only="ctrl.readOnly"
+                         on-rating="ctrl.onRating(rating)" >
+        </jk-rating-stars>
+        <button class="btn btn-primary right">Submit Review</button>
+        <div class="revMes">{{$ctrl.revMes}}</div>
+      </form>
+      <div class="review-wrapper" ng-repeat="review in $ctrl.reviews | orderBy:'-created_at' track by review.id">
+        <span><b>{{review.created_by.username}}</b> at {{review.created_at | date:'medium'}}</span>
+        <ul class="list-unstyled list-inline rate">
+          <li ng-repeat="rate in [0,1,2,3,4]"
+          ng-class="{rated: $index+1 <= review.rate}">&#9733;</li>
+        </ul>
+        <br /><br />
+        <span class="review-comment">Comment: {{review.text}}</span>
+      </div>
+    </section>
+  </div>
+</article>

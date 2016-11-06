@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="app">
+
+<head>
+	<base href="/" />
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Заголовок</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/jk-rating-stars.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="header">
+						<div class="col-sm-4">
+								<div class="logo">
+									<a ng-href="products" class="logo-href">
+										<span>Products</span>
+									</a>
+								</div>
+						</div>
+						<div class="col-sm-8">
+							<authorization></authorization>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<ng-view></ng-view>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+	<script src="js/jk-rating-stars.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-cookies.min.js"></script> -->
+
+	<script src="js/app.js"></script>
+	<script src="js/authorization.component.js"></script>
+	<script src="js/products.component.js"></script>
+	<script src="js/review.component.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<section class="logging">
+    <form class="form-inline" ng-submit="$ctrl.signIn(login, password)"
+          ng-click="$ctrl.showRegistrationForm = false"
+          ng-class="{none: $ctrl.checkUser !== undefined,
+                    'sign-in': $ctrl.checkUser === undefined}">
+        <div class="form-group">
+            <label class="sr-only" for="lodin">Login</label>
+            <input type="text" class="form-control" id="login"
+                   placeholder="Login" ng-model="$ctrl.login" required>
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="password">Password</label>
+            <input type="password" class="form-control" id="password"
+                   placeholder="Password" ng-model="$ctrl.password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+        <span class="sing-in-massage">{{$ctrl.messageSignIn}}</span>
+    </form>
+    <button class="btn btn-default sign-up-button"
+            ng-click="$ctrl.registrationForm()"
+            ng-show="!$ctrl.checkUser">
+        Sign up
+    </button>
+    <button class="btn btn-default sign-up-button"
+            ng-click="$ctrl.logout()"
+            ng-show="$ctrl.checkUser">
+        Logout
+    </button>
+
+    <form class="form-horizontal sign-up"
+          ng-hide="!$ctrl.showRegistrationForm"
+          ng-submit="$ctrl.signUp(loginReg, passwordReg)">
+        <div class="form-group">
+            <label for="loginReg" class="col-sm-3 control-label fix-reg">Login</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="loginReg"
+                       placeholder="Login" ng-model="$ctrl.loginReg" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="passwordReg" class="col-sm-3 control-label">Password</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="passwordReg"
+                       placeholder="Password" ng-model="$ctrl.passwordReg"
+                       required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="cos-sm-12">
+                <button type="submit" class="btn btn-primary btn-sign-up">
+                    Sign up
+                </button>
+                <span class="sign-up-message" ng-class="{check: $ctrl.check === true }">
+            {{$ctrl.messageReg}}
+      </span>
+            </div>
+        </div>
+    </form>
+</section>
